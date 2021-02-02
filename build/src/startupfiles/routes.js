@@ -9,14 +9,6 @@ var _routeNotMatch = require("../routes/routeNotMatch");
 
 var _userRouter = _interopRequireDefault(require("../routes/userRouter"));
 
-var _passengerRouter = _interopRequireDefault(require("../routes/passengerRouter"));
-
-var _driverRouter = _interopRequireDefault(require("../routes/driverRouter"));
-
-var _chatRouter = _interopRequireDefault(require("../routes/chatRouter"));
-
-var _adminRouter = _interopRequireDefault(require("../routes/adminRouter"));
-
 var _morgan = _interopRequireDefault(require("morgan"));
 
 var _config = require("../config");
@@ -37,10 +29,6 @@ const Routes = app => {
   app.use(_config.BASE_URL + "/uploads", _express.default.static("uploads"));
   app.use((0, _morgan.default)("dev"));
   app.use(_config.BASE_URL + "/user", _userRouter.default);
-  app.use(_config.BASE_URL + "/passenger", _passengerRouter.default);
-  app.use(_config.BASE_URL + "/driver", _driverRouter.default);
-  app.use(_config.BASE_URL + "/chat", _chatRouter.default);
-  app.use(_config.BASE_URL + "/admin", _adminRouter.default);
   app.use("*", _routeNotMatch.routeNotFound);
 };
 

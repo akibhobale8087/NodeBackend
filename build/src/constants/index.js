@@ -28,18 +28,6 @@ Object.keys(_StatusCodes).forEach(function (key) {
   });
 });
 
-var _enums = require("./enums.js");
-
-Object.keys(_enums).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _enums[key];
-    }
-  });
-});
-
 var _schemaNames = require("./schemaNames.js");
 
 Object.keys(_schemaNames).forEach(function (key) {

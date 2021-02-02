@@ -12,7 +12,7 @@ const CustomMessages = Object.freeze({
   SUCCESS: "SUCCESS",
   USER_EXIST: "User already exist.",
   USER_NOT_EXIST: "User not exist.",
-  INCORRECT_CONTACT_NUMBER: "Invalid user contact number.",
+  INCORRECT_EMAIL: "Invalid email.",
   INCORRECT_PASSWORD: "Invalid password.",
   LOGIN_SUCCESS: "Login successfully.",
   USER_NOT_VARIFIED: "User not verified",
@@ -38,13 +38,8 @@ const CustomMessages = Object.freeze({
   FAILED_TO_CREATE: "Failed to create record.",
   EMIAL_ALREADY_EXIST: "Email already exist!",
   NO_SUCH_EMAIL: "No such type of email exist",
-  PAYMENT_TRANSFER_SUCCESS: "Payment transfer successfully",
-  PAYMENT_TRANSFER_FAIL: "Payment transfer fail",
   INVOICE_PAY_FAILED: "Invoice pay failed",
   FAILED_TO_SEND_INVOICE: "Failed to send invoice.",
-  CRON_RESPONSE: "Done",
-  NOT_ANY_CURRENT_RIDE: "No any current ride",
-  BOOKING_REJECTED_SUCCESS: "Ride reject successfully",
-  RIDE_COMPLET_SUCCESS: "Ride complet successfully"
+  CRON_RESPONSE: "Done"
 });
 exports.CustomMessages = CustomMessages;

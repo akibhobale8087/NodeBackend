@@ -11,8 +11,6 @@ var _Response = _interopRequireDefault(require("../utils/Response"));
 
 var _constants = require("../constants");
 
-var _async_middleware = require("./async_middleware");
-
 var _config = require("../config");
 
 var _models = require("../models");
@@ -37,16 +35,6 @@ const checkAuth = async (req, res, next) => {
   }
 
   if (!user) return res.send(_Response.default.sendResponse(false, "", _constants.CustomMessages.AUTH_FAILED, _constants.StatusCode.BAD_REQUEST));
-  if (!_constants.ROLES.includes(user.role)) return res.send(_Response.default.sendResponse(false, "", _constants.CustomMessages.AUTH_PERMISSION, _constants.StatusCode.FORBIDDEN));
-
-  if (userInfo.role == "DRIVER") {
-    if (!userInfo.isVerified) {
-      return res.send(_Response.default.sendResponse(true, {
-        isVerified: userInfo.isVerified
-      }, _constants.CustomMessages.USER_NOT_VARIFIED, _constants.StatusCode.UNAUTHORIZED));
-    }
-  }
-
   req.user = user;
   next();
 };
