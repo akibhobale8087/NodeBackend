@@ -1,0 +1,21 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.SCHEMA_NAMES = void 0;
+
+/**
+ * DataBase Schema Name
+ */
+const SCHEMA_NAMES = {
+  USER: "USER",
+  CAR: "CAR",
+  CARBOOKING: "CARBOOKING",
+  DRIVERNOTIFICATION: "DRIVERNOTIFICATION",
+  CHATRECORDS: "CHATRECORDS",
+  SUBSCRIPTIONPACKAGE: "SUBSCRIPTIONPACKAGE",
+  PACKAGES: "PACKAGES",
+  DRIVERHISTORY: "DRIVERHISTORY"
+};
+exports.SCHEMA_NAMES = SCHEMA_NAMES;
